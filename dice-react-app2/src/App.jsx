@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import "./phone2.css?v=2.1";
+import "./phone2.css?v=2.2";
 import Header from "./header.jsx";
 import DiceRoller from "./dice.jsx";
 
@@ -34,8 +34,8 @@ function App() {
   // Function to calculate dice size based on numDice
   const getDiceSize = (count) => {
     if (count < 2) return '13em';  // Large dice for small counts
-    if (count <= 4) return '5rem';  // Medium dice
-    if (count <= 6) return '3rem';  // Medium dice
+    if (count <= 4) return '4rem';  // Medium dice
+    if (count <= 6) return '2.7rem';  // Medium dice
     return '3rem';  // Small dice for large count
   };
 

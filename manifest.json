@@ -1,0 +1,16 @@
+{
+    "name": "Dice Roller",
+    "short_name": "Dice",
+    "icons": [
+      {
+        "src": "/apple-touch-icon.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      }
+    ],
+    "display": "standalone",
+    "start_url": "/",
+    "background_color": "#ffffff",
+    "theme_color": "#000000"
+  }
+  

@@ -1,0 +1,48 @@
+@media (max-width: 768px) {
+    .heading {
+      flex-direction: row;
+      text-align: center;
+    }
+  
+    h1 {
+      font-size: 1.5rem; /* Smaller heading */
+    }
+  
+
+    .logo {
+      width: 3rem; /* Reduce logo size */
+      padding: 0.5rem;
+    }
+  
+    .dice_number {
+      width: 12rem;
+
+    }
+  
+    .dice-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow dice to wrap to the next line */
+        gap: 0.01rem; /* Adjust spacing between dice */
+        justify-content: center; /* Center the items horizontally */
+        align-items: center; /* Center the items vertically (if needed) */
+}
+  
+    .dice-image {
+      width: 7rem; 
+      height: auto;
+    }
+  
+    .roll-button {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  
+    .total-container {
+      margin-top: 0rem;
+    }
+  
+    .goggins-image, .emoji-display {
+      width: 8rem; /* Scale down images */
+    }
+  }
+  

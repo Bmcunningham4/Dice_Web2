@@ -68,7 +68,7 @@ function App() {
         {diceValue === 6 ? (
           <img src={goggins1} alt="Goggins" className="goggins-image" />
         ) : (
-          <span className="emoji-display">{"☀️🌈".repeat(25)}</span>
+          <span className="emoji-display">{"☀️🌈".repeat(10)}</span>
         )}
       </div>
     </div>

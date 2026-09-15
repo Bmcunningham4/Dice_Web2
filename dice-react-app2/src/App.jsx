@@ -28,7 +28,7 @@ function App() {
   const [rolling, setRolling] = useState(false);
   const [diceValue, setDiceValue] = useState(1);
 
-  const rollDice = () => {
+  const roll = (forceSix = false) => {
     if (rolling) return;
     setRolling(true);
 
@@ -41,7 +41,10 @@ function App() {
       if (count === 50) {
         clearInterval(interval);
         setRolling(false);
-        setDiceValue(diceValues[newDice]);
+
+        const finalDice = forceSix ? dice_6 : newDice;
+        setCurrentDice(finalDice);
+        setDiceValue(diceValues[finalDice]);
       }
     }, 40);
   };
@@ -54,14 +57,14 @@ function App() {
           src={currentDice}
           alt="Dice"
           className="dice-image"
-          onClick={rollDice}
+          onClick={() => roll()}
           style={{ cursor: rolling ? "not-allowed" : "pointer" }}
         />
       </div>
 
       <div className="total-container">
         {/* Roll button */}
-        <button onClick={rollDice} disabled={rolling} className="roll-button">
+        <button onClick={() => roll()} disabled={rolling} className="roll-button">
           Roll Dice
         </button>
         {/* Display Goggins image if the die shows 6, otherwise show ☀️🌈 */}
@@ -71,6 +74,11 @@ function App() {
           <span className="emoji-display">{"☀️🌈".repeat(10)}</span>
         )}
       </div>
+
+      {/* Guarantees a 6, for showing off the Goggins easter egg */}
+      <button onClick={() => roll(true)} disabled={rolling} className="demo-button">
+        Demo
+      </button>
     </div>
   );
 }

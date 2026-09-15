@@ -37,8 +37,8 @@ h1 {
   }
   
   .dice-image {
-    width: 20rem;
-    height: 20rem;
+    width: 30rem;
+    height: 30rem;
     padding: 2rem;
     cursor: pointer;
     transition: transform 0.1s ease-in-out;

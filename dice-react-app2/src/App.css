@@ -55,12 +55,20 @@ h1 {
     cursor: pointer;
   }
 
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
 /* Center align the total, roll button, and conditional content */
 .total-container {
   display: flex;
   flex-direction: column;
   align-items: center; /* Centers everything horizontally */
   justify-content: center;
+  flex: 1 1 0; /* Fill remaining space below the header/die so the goggins image can grow into it. Unitless 0 basis (not 0%) avoids the flex quirk where a percentage basis falls back to content size inside an indefinite-height ancestor. */
+  min-height: 0;
   margin-top: 20px;
 }
 
@@ -68,10 +76,20 @@ h1 {
   margin: 10px 0;
 }
 
-/* Make sure Goggins image and emojis are centered */
-.goggins-image, .emoji-display {
+.emoji-display {
   display: block;
   margin: 10px auto;
+}
+
+/* Grows to fill the rest of the screen below the roll button, without ever pushing the button offscreen */
+.goggins-image {
+  display: block;
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  max-width: 95vw;
+  object-fit: contain;
+  margin: 10px auto 0;
 }
 
 

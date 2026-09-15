@@ -41,8 +41,12 @@
       margin-top: 0rem;
     }
   
-    .goggins-image, .emoji-display {
-      width: 8rem; /* Scale down images */
+    .emoji-display {
+      width: 8rem; /* Scale down emoji row */
+    }
+
+    .goggins-image {
+      max-width: 90vw;
     }
   }
   

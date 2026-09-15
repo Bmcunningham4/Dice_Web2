@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import "./phone2.css?v=2.3";
+import "./phone2.css?v=2.4";
 import Header from "./header.jsx";
 
 import dice_1 from "./assets/dice_1.svg.png";
@@ -47,7 +47,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="app-shell">
       <Header />
       <div className="dice-container">
         <img

@@ -37,8 +37,9 @@ h1 {
   }
   
   .dice-image {
-    width: 15rem;
-    height: 15rem;
+    width: 20rem;
+    height: 20rem;
+    padding: 2rem;
     cursor: pointer;
     transition: transform 0.1s ease-in-out;
   }
@@ -46,7 +47,7 @@ h1 {
   .dice-image:active {
     transform: scale(0.9); /* Slight press animation */
   }
-  
+
   .roll-button {
     margin-top: 20px;
     padding: 10px 20px;
@@ -54,25 +55,6 @@ h1 {
     cursor: pointer;
   }
 
-
-/*? My attempt at doing -+ buttons... */
-.dice-image {
-    padding: 2rem;
-}
-
-.diff-buttons {
-    background-color: #242424;
-    font-size: 7rem;
-    padding: 0;
-}
-
-.dice-gang {
-    display: flex;
-    flex-direction: row;
-  /* Full screen height */
-
-}   
-  
 /* Center align the total, roll button, and conditional content */
 .total-container {
   display: flex;

@@ -64,14 +64,11 @@ function App() {
         <button onClick={rollDice} disabled={rolling} className="roll-button">
           Roll Dice
         </button>
-        {/* Display the dice value */}
-        <h2>Total: {diceValue}</h2>
-
         {/* Display Goggins image if the die shows 6, otherwise show ☀️🌈 */}
         {diceValue === 6 ? (
           <img src={goggins1} alt="Goggins" className="goggins-image" />
         ) : (
-          <span className="emoji-display">☀️🌈☀️🌈☀️</span>
+          <span className="emoji-display">{"☀️🌈".repeat(25)}</span>
         )}
       </div>
     </div>
